@@ -11,7 +11,7 @@ const Navbar = ({navigate}) => {
 
   return (
     <nav className='navbar'>
-      <a className='title'>
+      <a href='/' className='title'>
         My Planner
       </a>
       <div className='menu'>

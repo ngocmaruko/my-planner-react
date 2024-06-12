@@ -12,4 +12,6 @@ body {
   /*background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));*/
   color: var(--color-text);
   font-family: var(--font-roboto);
+  margin: 0;
+  padding: 0;
 }
