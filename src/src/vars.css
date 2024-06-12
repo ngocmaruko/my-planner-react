@@ -1,0 +1,14 @@
+:root {
+  --color-text: #7D655E; /* Darker beige for text */
+  --color-primary: hsla(15, 94%, 81%, .5); /* Elegant beige color */
+  --color-text-background: #ffecd2; /* White */
+  --color-dark: #BC8F8F; /* Dark beige-based color */
+  --font-roboto: "Open Sans", sans-serif; /* Font family */
+  --my-gradient: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient pastel background */
+  
+}
+body {
+  /*background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));*/
+  color: var(--color-text);
+  font-family: var(--font-roboto);
+}

@@ -1,0 +1,105 @@
+@import '../vars.css';
+
+.calendar {
+  width: 100%;
+  max-width: 450px; /* Set a maximum width for larger screens */
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient pastel background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.calendar h3 {
+  margin-top: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #ff7f50; /* Coral color on hover */
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%; /* Change to 100% to make it responsive */
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.day:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+}
+
+.day-label {
+  font-weight: bold;
+}
+
+.date-label {
+
+  margin-top: 5px;
+}
+
+.current-day {
+  background-color: #ffecd2; /* Example background color for the current day */
+  font-weight: bold; /* Example style for making the current day standout */
+}
+
+.other-month-day {
+  color: #ccc; /* Lighter color for days not in the current month */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .calendar {
+    max-width: 90%; /* Adjust max width for smaller screens */
+  }
+
+  .day {
+    height: 50px; /* Adjust height for smaller screens */
+  }
+
+  .nav-button {
+    font-size: 1.2rem; /* Adjust button size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    max-width: 100%; /* Use full width for very small screens */
+  }
+
+  .day {
+    height: 40px; /* Further adjust height for very small screens */
+  }
+
+  .days {
+    grid-template-columns: repeat(7, 1fr); /* Maintain the grid layout */
+  }
+}

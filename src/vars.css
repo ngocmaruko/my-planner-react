@@ -1,0 +1,15 @@
+:root {
+  --color-text: #7D655E; /* Darker beige for text */
+  --color-primary: hsla(15, 94%, 81%, .5); /* Elegant beige color */
+  --color-text-background: #ffecd2; /* White */
+  --color-dark: #BC8F8F; /* Dark beige-based color */
+  --font-roboto:'Segoe UI Emoji', 'Noto Color Emoji', 'Twemoji', 'Segoe UI', sans-serif;
+
+  --my-gradient: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient pastel background */
+  
+}
+body {
+  /*background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));*/
+  color: var(--color-text);
+  font-family: var(--font-roboto);
+}

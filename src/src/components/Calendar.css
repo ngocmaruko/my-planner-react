@@ -1,0 +1,72 @@
+@import '../vars.css';
+
+.calendar {
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient pastel background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.calendar h3 {
+  margin-top: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #ff7f50; /* Coral color on hover */
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.day:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+}
+
+.day-label {
+  font-weight: bold;
+}
+
+.date-label {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.current-day {
+  background-color: #ffecd2; /* Example background color for the current day */
+  font-weight: bold; /* Example style for making the current day standout */
+}
+

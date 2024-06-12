@@ -1,0 +1,174 @@
+/* App.css */
+.App {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.left-column {
+  width: 20%; /* 20% width for the left column */
+  background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient pastel background */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.right-column {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+h1 {
+  text-align: center; /* Align the title to the right */
+}
+
+button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* JournalList and JournalEntry specific styles */
+.journal-list,
+.journal-entry {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.journal-list-header,
+.journal-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.create-button,
+.done-button,
+.back-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.entry-header .date-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.entry-date {
+  font-size: 12px;
+  color: gray;
+}
+
+
+
+/* Add this CSS for the hamburger menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  position: fixed; /* Set position to fixed */
+  top: 20px; /* Adjust top position as needed */
+  right: 20px; /* Adjust right position as needed */
+  z-index: 9999; /* Set higher z-index to overlay other elements */
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+.show-menu .hamburger {
+  transform: rotate(45deg);
+}
+
+.show-menu .hamburger:before {
+  transform: translateY(9px) rotate(-90deg);
+}
+
+.show-menu .hamburger:after {
+  transform: translateY(-9px) rotate(90deg);
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 830px) {
+  .App {
+    flex-direction: column;
+    position: relative; /* Ensure relative positioning for children */
+  }
+
+  .left-column {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .right-column {
+    width: 100%;
+    position: relative; /* Ensure relative positioning for children */
+    z-index: 1; /* Ensure content is above the hamburger menu */
+  }
+
+  .left-column.show-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-column.show-menu h2 {
+    display: none;
+  }
+
+  .left-column.show-menu button {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .left-column button {
+    display: none; /* Hide buttons by default */
+  }
+
+  .show-menu .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 9998; /* Set z-index below hamburger menu */
+  }
+}

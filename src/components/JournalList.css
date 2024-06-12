@@ -1,0 +1,90 @@
+/* JournalList.css */
+@import '../vars.css';
+
+
+.journal-list {
+  width: 80%;
+  margin: auto;
+}
+
+.journal-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.create-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.entry-list{
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: var(--color-primary);
+}
+
+.entry-text {
+  flex: 1;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.entry-date {
+  font-size: 12px;
+  color: gray;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+
+}
+
+
+.entry-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-content > * {
+  margin-bottom: 5px; /* Adjust as needed */
+}
+.entry-emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Align emojis horizontally in the center */
+}
+
+.entry-content {
+  flex-grow: 1;
+}
+
+.entry-emoji {
+  margin-right: 20px;
+}
+
+.delete-button {
+  margin-left: 10px;
+}

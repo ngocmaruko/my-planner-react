@@ -1,0 +1,87 @@
+.todo-list {
+  margin-top: 20px;
+  max-width: 450px; /* Adjusted width */
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list h2 {
+  margin-bottom: 15px;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list li span {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.todo-list button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fcb69f; /* Relevant to background color of calendar */
+  color: #333; /* Adjusted text color */
+  transition: background 0.3s;
+}
+
+.todo-list button:hover {
+  background-color: #ffecd2; /* Lighter shade for hover */
+}
+
+.todo-list input {
+  width: calc(100% - 100px);
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.todo-list button {
+  width: 80px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.todo-list li {
+  position: relative; /* Add position relative to make positioning the dot easier */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: red; /* Default color */
+  cursor: pointer;
+}
+
+.dot.completed {
+  background-color: green; /* Completed color */
+}
